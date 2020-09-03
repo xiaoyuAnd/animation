@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            position: relative;
+            left: 0;
+            height: 100px;
+            width: 100px;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+        var n = 0;
+        var id = setInterval(() => {
+            if (n <= 200) {
+                n += 1;
+                box.style.left = n + "px"
+            } else {
+                clearInterval(id)
+            }
+
+        }, 1000 / 60)
+    </script>
+</body>
+
+</html>
